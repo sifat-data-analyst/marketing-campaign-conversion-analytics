@@ -1,0 +1,85 @@
+PROJECT 5 — COMPREHENSIVE DATA QUALITY AUDIT
+Folder: <PROJECT_ROOT>
+Dataset is synthetic. Raw CSV files are not modified.
+
+--- campaigns.csv ---
+[INFO] STRUCTURE: 120 rows; 7 columns; columns=['campaign_id', 'campaign_name', 'channel', 'objective', 'start_date', 'end_date', 'budget']
+[PASS] MISSING: campaigns: 0 null cells
+[PASS] BLANK TEXT: campaigns: 0 blank/whitespace cells
+[PASS] DUPLICATE ROWS: campaigns: 0
+[PASS] UNIQUE ID: campaigns.campaign_id: 0 duplicate IDs
+
+--- daily_spend.csv ---
+[INFO] STRUCTURE: 11240 rows; 6 columns; columns=['spend_id', 'campaign_id', 'spend_date', 'impressions', 'clicks', 'spend']
+[PASS] MISSING: daily_spend: 0 null cells
+[PASS] BLANK TEXT: daily_spend: 0 blank/whitespace cells
+[PASS] DUPLICATE ROWS: daily_spend: 0
+[PASS] UNIQUE ID: daily_spend.spend_id: 0 duplicate IDs
+
+--- leads.csv ---
+[INFO] STRUCTURE: 261684 rows; 5 columns; columns=['lead_id', 'campaign_id', 'created_at', 'lead_source', 'lead_score']
+[PASS] MISSING: leads: 0 null cells
+[PASS] BLANK TEXT: leads: 0 blank/whitespace cells
+[PASS] DUPLICATE ROWS: leads: 0
+[PASS] UNIQUE ID: leads.lead_id: 0 duplicate IDs
+
+--- conversions.csv ---
+[INFO] STRUCTURE: 39696 rows; 5 columns; columns=['conversion_id', 'lead_id', 'converted_at', 'conversion_type', 'revenue']
+[PASS] MISSING: conversions: 0 null cells
+[PASS] BLANK TEXT: conversions: 0 blank/whitespace cells
+[PASS] DUPLICATE ROWS: conversions: 0
+[PASS] UNIQUE ID: conversions.conversion_id: 0 duplicate IDs
+
+[PASS] DATE PARSING: campaigns.start_date: 0 invalid dates
+[PASS] DATE COVERAGE: campaigns.start_date: 0 dates outside 2023-01-01 to 2025-12-31
+[PASS] DATE PARSING: campaigns.end_date: 0 invalid dates
+[PASS] DATE COVERAGE: campaigns.end_date: 0 dates outside 2023-01-01 to 2025-12-31
+[PASS] DATE PARSING: daily_spend.spend_date: 0 invalid dates
+[PASS] DATE COVERAGE: daily_spend.spend_date: 0 dates outside 2023-01-01 to 2025-12-31
+[PASS] DATE PARSING: leads.created_at: 0 invalid dates
+[PASS] DATE COVERAGE: leads.created_at: 0 dates outside 2023-01-01 to 2025-12-31
+[PASS] DATE PARSING: conversions.converted_at: 0 invalid dates
+[PASS] DATE COVERAGE: conversions.converted_at: 0 dates outside 2023-01-01 to 2025-12-31
+[PASS] CAMPAIGN DATES: end_date before start_date: 0
+[PASS] FOREIGN KEY: daily_spend campaign IDs missing from campaigns: 0
+[PASS] FOREIGN KEY: lead campaign IDs missing from campaigns: 0
+[PASS] FOREIGN KEY: conversion lead IDs missing from leads: 0
+[PASS] RELATIONSHIP: Repeated lead_id in conversions (dictionary says one-to-one): 0
+[PASS] GRAIN: Repeated campaign_id + spend_date pairs: 0
+[PASS] BUSINESS RULE: Spend dates outside campaign active dates: 0
+[PASS] BUSINESS RULE: Lead dates outside campaign active dates: 0
+[PASS] BUSINESS RULE: Conversion before lead creation: 0
+[PASS] NUMERIC FORMAT: campaigns.budget: 0 non-numeric values
+[PASS] NEGATIVE VALUES: campaigns.budget: 0 negative values
+[PASS] NUMERIC FORMAT: daily_spend.impressions: 0 non-numeric values
+[PASS] NEGATIVE VALUES: daily_spend.impressions: 0 negative values
+[PASS] NUMERIC FORMAT: daily_spend.clicks: 0 non-numeric values
+[PASS] NEGATIVE VALUES: daily_spend.clicks: 0 negative values
+[PASS] NUMERIC FORMAT: daily_spend.spend: 0 non-numeric values
+[PASS] NEGATIVE VALUES: daily_spend.spend: 0 negative values
+[PASS] NUMERIC FORMAT: leads.lead_score: 0 non-numeric values
+[PASS] NEGATIVE VALUES: leads.lead_score: 0 negative values
+[PASS] NUMERIC FORMAT: conversions.revenue: 0 non-numeric values
+[PASS] NEGATIVE VALUES: conversions.revenue: 0 negative values
+[PASS] BUSINESS RULE: Rows where clicks exceed impressions: 0
+[PASS] BUSINESS RULE: Lead scores outside documented 1–100 range: 0
+[PASS] CATEGORY: Unexpected objectives: None
+[PASS] CATEGORY: Unexpected conversion types: None
+
+--- DESCRIPTIVE TOTALS (not performance conclusions) ---
+Campaign rows: 120
+Daily spend rows: 11240
+Lead rows: 261684
+Conversion rows: 39696
+Total spend: 4,523,050.02
+Total attributed revenue: 21,561,839.01
+
+--- SUMMARY ---
+PASS checks: 51
+WARNING checks: 0
+FAIL checks: 0
+Warnings require review; they do not automatically mean the data is wrong.
+Raw CSV files were not edited.
+
+--- ITEMS TO REVIEW ---
+No WARNING or FAIL checks raised.

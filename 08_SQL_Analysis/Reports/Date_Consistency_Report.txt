@@ -1,0 +1,8 @@
+Changed database context to 'Project_5_Marketing_Analytics'.
+CheckName ErrorRows
+--------- ---------
+Spend Outside Campaign Dates 0
+Leads Outside Campaign Dates 0
+Conversion Before Lead Creation 0
+
+(3 rows affected)

@@ -1,0 +1,80 @@
+PROJECT 5 - CSV IMPORT READINESS AUDIT
+=======================================================
+Audit Time: 2026-11-16T14:38:20
+Original CSV files will not be modified.
+
+FILE: campaigns.csv
+---------------------------------------------
+File Size: 9,361 bytes
+Detected BOM: None
+Expected Rows: PASS
+Expected Columns: PASS
+Consistent Row Width: PASS
+No Comma Fields: PASS
+No Quote Fields: PASS
+Actual Rows: 120
+Actual Columns: 7
+Malformed Rows: 0
+Comma Fields: 0
+Quote Fields: 0
+Header: campaign_id, campaign_name, channel, objective, start_date, end_date, budget
+FILE STATUS: PASS
+
+FILE: daily_spend.csv
+---------------------------------------------
+File Size: 528,707 bytes
+Detected BOM: None
+Expected Rows: PASS
+Expected Columns: PASS
+Consistent Row Width: PASS
+No Comma Fields: PASS
+No Quote Fields: PASS
+Actual Rows: 11,240
+Actual Columns: 6
+Malformed Rows: 0
+Comma Fields: 0
+Quote Fields: 0
+Header: spend_id, campaign_id, spend_date, impressions, clicks, spend
+FILE STATUS: PASS
+
+FILE: leads.csv
+---------------------------------------------
+File Size: 11,022,084 bytes
+Detected BOM: None
+Expected Rows: PASS
+Expected Columns: PASS
+Consistent Row Width: PASS
+No Comma Fields: PASS
+No Quote Fields: PASS
+Actual Rows: 261,684
+Actual Columns: 5
+Malformed Rows: 0
+Comma Fields: 0
+Quote Fields: 0
+Header: lead_id, campaign_id, created_at, lead_source, lead_score
+FILE STATUS: PASS
+
+FILE: conversions.csv
+---------------------------------------------
+File Size: 1,761,035 bytes
+Detected BOM: None
+Expected Rows: PASS
+Expected Columns: PASS
+Consistent Row Width: PASS
+No Comma Fields: PASS
+No Quote Fields: PASS
+Actual Rows: 39,696
+Actual Columns: 5
+Malformed Rows: 0
+Comma Fields: 0
+Quote Fields: 0
+Header: conversion_id, lead_id, converted_at, conversion_type, revenue
+FILE STATUS: PASS
+
+=======================================================
+TOTAL DATA ROWS: 312,740
+TOTAL COLUMNS: 23
+OVERALL STATUS: PASS
+
+SCOPE: Preliminary CSV structural readiness only.
+This is not a complete data-integrity or SQL import audit.

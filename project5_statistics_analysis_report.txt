@@ -1,0 +1,51 @@
+PROJECT 5 — STATISTICAL ANALYSIS REPORT
+Project folder: <PROJECT_ROOT>
+
+DATASET SCOPE
+Campaigns analyzed: 120
+Spend records loaded: 11240
+Leads loaded: 261684
+Conversions loaded: 39696
+Channels analyzed: 5
+
+CHANNEL DESCRIPTIVE SUMMARY
+    channel  campaigns  total_spend  total_impressions  total_clicks  total_leads  total_conversions  attributed_revenue  mean_campaign_ctr_pct  median_campaign_ctr_pct  mean_campaign_roas  median_campaign_roas  mean_campaign_cpc  median_campaign_cpc  overall_ctr_pct  overall_roas
+  affiliate         24    857835.07           95314042       2386856        67849              10352          5610700.73               2.500954                 2.506318            7.928143              6.919872           0.359979             0.359099         2.504202      6.540536
+    display         24    955297.00          146967688        879874        45149               6744          3734117.43               0.597957                 0.597095            3.910376              3.970558           1.087335             1.088615         0.598685      3.908855
+paid_search         24    897091.53           49837405       1740314        65268              10019          5439329.35               3.494469                 3.505112            6.734678              7.422096           0.515255             0.513550         3.491984      6.063294
+paid_social         24    984731.88           89520215       1602785        57619               8648          4690137.28               1.783956                 1.798100            5.023908              4.820719           0.616846             0.611764         1.790417      4.762857
+      video         24    828094.54           55205469        492490        25799               3933          2087554.22               0.894533                 0.894735            2.504421              2.439132           1.677431             1.676493         0.892104      2.520913
+
+STATISTICAL TESTS
+Kruskal-Wallis tests compare campaign-level metric distributions across channels.
+Pairwise Mann-Whitney tests use Holm adjustment for multiple comparisons.
+roas: Kruskal-Wallis H=72.2813, p-value=7.4844e-15, epsilon-squared=0.5938, campaigns tested=120
+ctr_pct: Kruskal-Wallis H=114.2479, p-value=9.03091e-24, epsilon-squared=0.9587, campaigns tested=120
+cpc: Kruskal-Wallis H=114.2479, p-value=9.03091e-24, epsilon-squared=0.9587, campaigns tested=120
+
+LEAD SOURCE SUMMARY
+lead_source  leads  mean_lead_score  median_lead_score  lead_score_std  leads_with_conversion  lead_conversion_pct
+  affiliate  67849        50.562013               50.0       28.868050                  10352            15.257410
+    display  45149        50.536623               51.0       28.895894                   6744            14.937208
+paid_search  65268        50.661381               51.0       28.797142                  10019            15.350555
+paid_social  57619        50.474201               51.0       28.949817                   8648            15.008938
+      video  25799        50.642932               51.0       28.826116                   3933            15.244777
+
+LEAD SCORE TEST
+Lead score by lead_source: Kruskal-Wallis H=1.5144, p-value=0.824081. This compares score distributions, not business causality.
+
+INTERPRETATION NOTES
+- A small p-value indicates evidence of distribution differences, not proof that channel caused the difference.
+- A non-significant result does not prove that channels are identical.
+- Effect size and medians should be considered alongside p-values.
+- Campaigns may differ in budget, objective, dates, and other factors.
+- ROAS is attributed revenue divided by spend; it is not profit or ROI.
+- This dataset is synthetic; results must not be presented as real-company outcomes.
+- Lead-source conversion percentages use whether a lead has any mapped conversion; they are not a causal attribution study.
+
+OUTPUT FILES
+project5_statistics_channel_summary.csv
+project5_statistics_pairwise_tests.csv
+project5_statistics_lead_source.csv
+project5_statistics_analysis_report.txt
+

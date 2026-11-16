@@ -1,0 +1,31 @@
+Changed database context to 'Project_5_Marketing_Analytics'.
+======================================
+PROJECT 5 - FINAL SQL QUALITY AUDIT
+======================================
+TableName TotalRows UniqueIDs
+--------- --------- ---------
+Campaigns 120 120
+Daily_Spend 11240 11240
+Leads 261684 261684
+Conversions 39696 39696
+TableName RowsWithNulls
+--------- -------------
+Campaigns 0
+Daily_Spend 0
+Leads 0
+Conversions 0
+TableName DuplicateGroups
+--------- ---------------
+Campaigns 0
+Daily_Spend 0
+Leads 0
+Conversions 0
+RelationshipName OrphanRows
+---------------- ----------
+Daily_Spend -> Campaigns 0
+Leads -> Campaigns 0
+Conversions -> Leads 0
+TotalImpressions TotalClicks TotalSpend TotalLeads TotalConversions TotalRevenue CTR_Percent CPC ConversionRate_Percent CostPerConversion ROAS
+---------------- ----------- ---------- ---------- ---------------- ------------ ----------- --- ---------------------- ----------------- ----
+436844819 7102319 4523050.02 261684 39696 21561839.01 1.6258 .6368 15.1694 113.9422 4.7671
+FINAL SQL QUALITY AUDIT COMPLETED

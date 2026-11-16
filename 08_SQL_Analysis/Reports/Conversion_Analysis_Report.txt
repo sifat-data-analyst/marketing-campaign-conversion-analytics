@@ -1,0 +1,22 @@
+Changed database context to 'Project_5_Marketing_Analytics'.
+TotalConversions UniqueConvertedLeads TotalAttributedRevenue                   AverageRevenuePerConversion              MinimumConversionRevenue MaximumConversionRevenue
+---------------- -------------------- ---------------------------------------- ---------------------------------------- ------------------------ ------------------------
+           39696                39696                              21561839.01                               543.174098                      .00                  2498.92
+conversion_type                TotalConversions TotalRevenue                             AverageRevenue                           ConversionShare_Percent
+------------------------------ ---------------- ---------------------------------------- ---------------------------------------- -----------------------
+purchase                                  16691                              21561839.01                              1291.824277                 42.0471
+trial                                     23005                                      .00                                  .000000                 57.9529
+LeadScoreRange ConvertedLeads TotalRevenue                             AverageRevenue                          
+-------------- -------------- ---------------------------------------- ----------------------------------------
+01-20                    3714                               1938217.34                               521.867889
+21-40                    5791                               3137698.76                               541.823305
+41-60                    7919                               4380299.10                               553.137908
+61-80                   10155                               5508944.45                               542.485913
+81-100                  12117                               6596679.36                               544.415231
+LeadScoreRange TotalLeads  ConvertedLeads ConversionRate_Percent
+-------------- ----------- -------------- ----------------------
+01-20                52251           3714                 7.1080
+21-40                51994           5791                11.1378
+41-60                52466           7919                15.0936
+61-80                52580          10155                19.3134
+81-100               52393          12117                23.1271

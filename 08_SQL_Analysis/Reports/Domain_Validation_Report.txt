@@ -1,0 +1,13 @@
+Changed database context to 'Project_5_Marketing_Analytics'.
+CheckName ErrorRows
+--------- ---------
+Negative Impressions 0
+Negative Clicks 0
+Clicks Greater Than Impressions 0
+Negative Spend 0
+Negative Budget 0
+Negative Revenue 0
+Invalid Lead Score 0
+Invalid Campaign Dates 0
+
+(8 rows affected)

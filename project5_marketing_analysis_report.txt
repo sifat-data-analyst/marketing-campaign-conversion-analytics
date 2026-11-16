@@ -1,0 +1,44 @@
+PROJECT 5 — MARKETING PERFORMANCE ANALYSIS
+Dataset is SYNTHETIC. Do not present results as real-company outcomes.
+Original source CSVs were read only and were not modified.
+
+OVERALL DESCRIPTIVE METRICS
+Campaigns: 120
+Impressions: 436,844,819
+Clicks: 7,102,319
+Spend: 4,523,050.02
+Leads: 261,684
+Conversions: 39,696
+Attributed revenue: 21,561,839.01
+CTR: 1.63%
+CPC: 0.64
+Overall lead-to-conversion rate: 15.17%
+Cost per conversion: 113.94
+ROAS: 4.77x
+
+INTERPRETATION NOTES
+- ROAS is attributed revenue divided by recorded media spend; it is not profit or ROI.
+- Overall lead-to-conversion rate is total conversions divided by unique leads, not a cohort-based rate.
+- Monthly leads use creation date; conversions/revenue use conversion date. Treat monthly rates cautiously.
+- Channel is taken from campaigns.channel; leads.lead_source is a separate field.
+- Rankings are descriptive and do not prove a channel caused an outcome.
+
+CHANNEL SUMMARY — sorted by attributed revenue
+affiliate: spend=857,835.07; leads=67,849; conversions=10,352; revenue=5,610,700.73; CTR=2.50%; ROAS=6.54x
+paid_search: spend=897,091.53; leads=65,268; conversions=10,019; revenue=5,439,329.35; CTR=3.49%; ROAS=6.06x
+paid_social: spend=984,731.88; leads=57,619; conversions=8,648; revenue=4,690,137.28; CTR=1.79%; ROAS=4.76x
+display: spend=955,297.00; leads=45,149; conversions=6,744; revenue=3,734,117.43; CTR=0.60%; ROAS=3.91x
+video: spend=828,094.54; leads=25,799; conversions=3,933; revenue=2,087,554.22; CTR=0.89%; ROAS=2.52x
+
+TOP 5 CAMPAIGNS BY ATTRIBUTED REVENUE
+CMP0060 | Affiliate 2024 060 | channel=affiliate | spend=62,309.32 | conversions=768 | revenue=417,738.92 | ROAS=6.70x
+CMP0050 | Affiliate 2023 050 | channel=affiliate | spend=35,219.40 | conversions=659 | revenue=388,919.88 | ROAS=11.04x
+CMP0021 | Paid Search 2024 021 | channel=paid_search | spend=71,337.50 | conversions=691 | revenue=380,892.89 | ROAS=5.34x
+CMP0061 | Paid Search 2023 061 | channel=paid_search | spend=48,907.03 | conversions=688 | revenue=369,829.93 | ROAS=7.56x
+CMP0081 | Paid Search 2023 081 | channel=paid_search | spend=43,017.04 | conversions=605 | revenue=361,820.39 | ROAS=8.41x
+
+OUTPUT FILES
+campaign_performance.csv
+channel_performance.csv
+monthly_performance.csv
+project5_marketing_analysis_report.txt

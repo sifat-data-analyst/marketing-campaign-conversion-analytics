@@ -1,0 +1,15 @@
+Changed database context to 'Project_5_Marketing_Analytics'.
+TotalImpressions TotalClicks TotalSpend TotalLeads TotalConversions TotalRevenue CTR_Percent CPC Lead_Conversion_Rate_Percent Cost_Per_Conversion ROAS
+---------------- ----------- ---------- ---------- ---------------- ------------ ----------- --- ---------------------------- ------------------- ----
+436844819 7102319 4523050.02 261684 39696 21561839.01 1.6258 .6368 15.1694 113.9422 4.7671
+
+(1 rows affected)
+MetricName ExpectedValue ActualValue Difference ValidationStatus
+---------- ------------- ----------- ---------- ----------------
+CTR_Percent 1.6258 1.6258 .0000 PASS
+CPC .6368 .6368 .0000 PASS
+Lead_Conversion_Rate_Percent 15.1694 15.1694 .0000 PASS
+Cost_Per_Conversion 113.9422 113.9422 .0000 PASS
+ROAS 4.7671 4.7671 .0000 PASS
+
+(5 rows affected)

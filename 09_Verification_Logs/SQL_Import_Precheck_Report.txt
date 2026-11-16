@@ -1,0 +1,55 @@
+PROJECT 5 - SQL IMPORT PRECHECK
+============================================================
+Audit time: 2026-11-16T14:38:20
+Original source CSV files will not be modified.
+
+FILE: campaigns.csv
+--------------------------------------------------
+PASS: Column names and order match SQL schema
+PASS: Expected row count: 120; actual: 120
+PASS: Blank values: 0
+PASS: Duplicate primary keys: 0
+PASS: Text length violations: 0
+PASS: Date validation errors: 0
+PASS: Numeric precision errors: 0
+PASS: Invalid data values: 0
+
+FILE: daily_spend.csv
+--------------------------------------------------
+PASS: Column names and order match SQL schema
+PASS: Expected row count: 11,240; actual: 11,240
+PASS: Blank values: 0
+PASS: Duplicate primary keys: 0
+PASS: Text length violations: 0
+PASS: Date validation errors: 0
+PASS: Numeric precision errors: 0
+PASS: Invalid data values: 0
+
+FILE: leads.csv
+--------------------------------------------------
+PASS: Column names and order match SQL schema
+PASS: Expected row count: 261,684; actual: 261,684
+PASS: Blank values: 0
+PASS: Duplicate primary keys: 0
+PASS: Text length violations: 0
+PASS: Date validation errors: 0
+PASS: Numeric precision errors: 0
+PASS: Invalid data values: 0
+
+FILE: conversions.csv
+--------------------------------------------------
+PASS: Column names and order match SQL schema
+PASS: Expected row count: 39,696; actual: 39,696
+PASS: Blank values: 0
+PASS: Duplicate primary keys: 0
+PASS: Text length violations: 0
+PASS: Date validation errors: 0
+PASS: Numeric precision errors: 0
+PASS: Invalid data values: 0
+
+============================================================
+TOTAL CHECKS PASSED: 32
+TOTAL CHECKS FAILED: 0
+OVERALL STATUS: PASS
+
+NOTE: This is a preliminary source-data precheck. SQL foreign keys and database constraints require separate validation.

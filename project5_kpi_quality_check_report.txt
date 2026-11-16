@@ -1,0 +1,88 @@
+PROJECT 5 — KPI & CALCULATION QUALITY CHECK
+Folder: <PROJECT_ROOT>
+Source CSVs are read-only; this script does not modify any CSV data.
+Checks passed: 74
+Checks failed: 0
+
+DETAILS
+[PASS] File exists: campaigns — campaigns.csv
+[PASS] File exists: daily_spend — daily_spend.csv
+[PASS] File exists: leads — leads.csv
+[PASS] File exists: conversions — conversions.csv
+[PASS] File exists: campaign_output — campaign_performance.csv
+[PASS] File exists: channel_output — channel_performance.csv
+[PASS] File exists: monthly_output — monthly_performance.csv
+[PASS] Campaign source has 120 rows — Rows=120
+[PASS] Campaign IDs unique — Rows=120; unique=120
+[PASS] Spend IDs unique — Rows=11240; unique=11240
+[PASS] Lead IDs unique — Rows=261684; unique=261684
+[PASS] Conversion IDs unique — Rows=39696; unique=39696
+[PASS] Spend campaign foreign keys valid
+[PASS] Lead campaign foreign keys valid
+[PASS] All conversions map to a lead — Unmatched=0
+[PASS] Conversion types are trial/purchase — Types=['purchase', 'trial']
+[PASS] Campaign output has 120 rows — Rows=120
+[PASS] Campaign output IDs unique
+[PASS] Campaign value/formula: impressions — Mismatches=0; tolerance ±0.03
+[PASS] Campaign value/formula: clicks — Mismatches=0; tolerance ±0.03
+[PASS] Campaign value/formula: spend — Mismatches=0; tolerance ±0.03
+[PASS] Campaign value/formula: spend_days — Mismatches=0; tolerance ±0.03
+[PASS] Campaign value/formula: leads — Mismatches=0; tolerance ±0.03
+[PASS] Campaign value/formula: conversions — Mismatches=0; tolerance ±0.03
+[PASS] Campaign value/formula: attributed_revenue — Mismatches=0; tolerance ±0.03
+[PASS] Campaign value/formula: trial_conversions — Mismatches=0; tolerance ±0.03
+[PASS] Campaign value/formula: purchase_conversions — Mismatches=0; tolerance ±0.03
+[PASS] Campaign value/formula: average_lead_score — Mismatches=0; tolerance ±0.03
+[PASS] Campaign value/formula: ctr_pct — Mismatches=0; tolerance ±0.03
+[PASS] Campaign value/formula: cpc — Mismatches=0; tolerance ±0.03
+[PASS] Campaign value/formula: lead_to_conversion_pct — Mismatches=0; tolerance ±0.03
+[PASS] Campaign value/formula: cost_per_conversion — Mismatches=0; tolerance ±0.03
+[PASS] Campaign value/formula: roas — Mismatches=0; tolerance ±0.03
+[PASS] Campaign value/formula: budget_used_pct — Mismatches=0; tolerance ±0.03
+[PASS] Campaign value/formula: revenue_minus_ad_spend — Mismatches=0; tolerance ±0.03
+[PASS] Channel output has 5 rows — Rows=5
+[PASS] Channel value/formula: campaigns — Mismatches=0; tolerance ±0.03
+[PASS] Channel value/formula: impressions — Mismatches=0; tolerance ±0.03
+[PASS] Channel value/formula: clicks — Mismatches=0; tolerance ±0.03
+[PASS] Channel value/formula: spend — Mismatches=0; tolerance ±0.03
+[PASS] Channel value/formula: leads — Mismatches=0; tolerance ±0.03
+[PASS] Channel value/formula: conversions — Mismatches=0; tolerance ±0.03
+[PASS] Channel value/formula: attributed_revenue — Mismatches=0; tolerance ±0.03
+[PASS] Channel value/formula: budget — Mismatches=0; tolerance ±0.03
+[PASS] Channel value/formula: ctr_pct — Mismatches=0; tolerance ±0.03
+[PASS] Channel value/formula: cpc — Mismatches=0; tolerance ±0.03
+[PASS] Channel value/formula: lead_to_conversion_pct — Mismatches=0; tolerance ±0.03
+[PASS] Channel value/formula: cost_per_conversion — Mismatches=0; tolerance ±0.03
+[PASS] Channel value/formula: roas — Mismatches=0; tolerance ±0.03
+[PASS] Channel value/formula: budget_used_pct — Mismatches=0; tolerance ±0.03
+[PASS] Channel value/formula: revenue_minus_ad_spend — Mismatches=0; tolerance ±0.03
+[PASS] Monthly output has 36 rows — Rows=36
+[PASS] Monthly value/formula: impressions — Mismatches=0; tolerance ±0.03
+[PASS] Monthly value/formula: clicks — Mismatches=0; tolerance ±0.03
+[PASS] Monthly value/formula: spend — Mismatches=0; tolerance ±0.03
+[PASS] Monthly value/formula: leads — Mismatches=0; tolerance ±0.03
+[PASS] Monthly value/formula: conversions — Mismatches=0; tolerance ±0.03
+[PASS] Monthly value/formula: attributed_revenue — Mismatches=0; tolerance ±0.03
+[PASS] Monthly value/formula: ctr_pct — Mismatches=0; tolerance ±0.03
+[PASS] Monthly value/formula: cpc — Mismatches=0; tolerance ±0.03
+[PASS] Monthly value/formula: lead_to_conversion_pct — Mismatches=0; tolerance ±0.03
+[PASS] Monthly value/formula: cost_per_conversion — Mismatches=0; tolerance ±0.03
+[PASS] Monthly value/formula: roas — Mismatches=0; tolerance ±0.03
+[PASS] Campaign spend reconciles — Output=4523050.02; source=4523050.02
+[PASS] Channel spend reconciles — Output=4523050.02; source=4523050.02
+[PASS] Monthly spend reconciles — Output=4523050.02; source=4523050.02
+[PASS] Campaign revenue reconciles — Output=21561839.01; source=21561839.01
+[PASS] Channel revenue reconciles — Output=21561839.01; source=21561839.01
+[PASS] Monthly revenue reconciles — Output=21561839.01; source=21561839.01
+[PASS] Campaign KPIs have no infinity values
+[PASS] Channel KPIs have no infinity values
+[PASS] Monthly KPIs have no infinity values
+[PASS] Source spend is non-negative
+[PASS] Source revenue is non-negative
+[INFO] Campaigns with spend above budget: 0. This is an observation, not automatically a data error.
+[INFO] revenue_minus_ad_spend is NOT profit or net income.
+[INFO] ROAS is attributed revenue / recorded media spend; it is NOT profit or ROI.
+[INFO] Monthly leads use lead creation month; conversions/revenue use conversion month. Monthly ratios are not cohort-based.
+[INFO] Dataset is synthetic; portfolio findings must not be presented as real-company outcomes.
+
+RESULT: ALL TESTED CHECKS PASSED.

@@ -1,0 +1,27 @@
+TABLE_NAME|COLUMN_NAME|DATA_TYPE|CHARACTER_MAXIMUM_LENGTH|NUMERIC_PRECISION|NUMERIC_SCALE|IS_NULLABLE
+----------|-----------|---------|------------------------|-----------------|-------------|-----------
+Campaigns|campaign_id|varchar|20|NULL|NULL|NO
+Campaigns|campaign_name|varchar|100|NULL|NULL|NO
+Campaigns|channel|varchar|30|NULL|NULL|NO
+Campaigns|objective|varchar|30|NULL|NULL|NO
+Campaigns|start_date|date|NULL|NULL|NULL|NO
+Campaigns|end_date|date|NULL|NULL|NULL|NO
+Campaigns|budget|decimal|NULL|18|2|NO
+Daily_Spend|spend_id|varchar|20|NULL|NULL|NO
+Daily_Spend|campaign_id|varchar|20|NULL|NULL|NO
+Daily_Spend|spend_date|date|NULL|NULL|NULL|NO
+Daily_Spend|impressions|int|NULL|10|0|NO
+Daily_Spend|clicks|int|NULL|10|0|NO
+Daily_Spend|spend|decimal|NULL|18|2|NO
+Leads|lead_id|varchar|20|NULL|NULL|NO
+Leads|campaign_id|varchar|20|NULL|NULL|NO
+Leads|created_at|date|NULL|NULL|NULL|NO
+Leads|lead_source|varchar|30|NULL|NULL|NO
+Leads|lead_score|int|NULL|10|0|NO
+Conversions|conversion_id|varchar|20|NULL|NULL|NO
+Conversions|lead_id|varchar|20|NULL|NULL|NO
+Conversions|converted_at|date|NULL|NULL|NULL|NO
+Conversions|conversion_type|varchar|30|NULL|NULL|NO
+Conversions|revenue|decimal|NULL|18|2|NO
+
+(23 rows affected)
